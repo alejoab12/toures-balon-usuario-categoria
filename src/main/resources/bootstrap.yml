@@ -1,6 +1,6 @@
 spring:
   application:
-    name: toures-balon-cusuario-categoria
+    name: toures-balon-usuario-categoria
   profiles: prod
   cloud:
     config:
