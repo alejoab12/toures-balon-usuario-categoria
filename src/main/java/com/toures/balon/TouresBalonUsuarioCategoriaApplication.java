@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
 @EnableDiscoveryClient
 @SpringBootApplication
 @ComponentScan(basePackages = { "com.toures.balon", "com.commons.gema" })
