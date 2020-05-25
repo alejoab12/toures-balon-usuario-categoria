@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-@EnableDiscoveryClient(autoRegister = false)
+@EnableDiscoveryClient
 @SpringBootApplication
 @ComponentScan(basePackages = { "com.toures.balon", "com.commons.gema" })
 public class TouresBalonUsuarioCategoriaApplication {
