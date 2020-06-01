@@ -1,6 +1,7 @@
 package com.toures.balon.kafka.recurso;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.toures.balon.categoria.modelo.PagoModelo;
 import com.toures.balon.usuario.modelo.UsuarioModelo;
 import com.toures.balon.usuario.servicio.TransaccionService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +20,8 @@ public class RecursoKafka {
         transaccionService.crearTransaccionConUsuarioNuevo(objectMapper.readValue(message, UsuarioModelo.class));
     }
 
-   /* @KafkaListener(topics = "toures-balon-pago", groupId = "toures-balon-pago")
+   @KafkaListener(topics = "toures-balon-pago", groupId = "toures-balon-pago")
     public void listenPagos(String message) throws Exception {
-
-    }*/
+       transaccionService.sumarPuntos(objectMapper.readValue(message, PagoModelo.class));
+    }
 }
