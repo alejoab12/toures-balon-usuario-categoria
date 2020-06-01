@@ -49,8 +49,7 @@ public class TransaccionServiceImp implements TransaccionService {
        if(!optionalTransaccion.isPresent()){
            throw  new ExcepcionPersonalizada(404,"No se encuentran transacciones para el usuario");
        }
-        return optionalTransaccion.get().stream().map(t -> modelMapper.map(t, TransaccionModelo.class))
-                .collect(Collectors.toList());
+        return optionalTransaccion.get().stream().map(t -> new TransaccionModelo(t)).collect(Collectors.toList());
     }
 
     @Override
