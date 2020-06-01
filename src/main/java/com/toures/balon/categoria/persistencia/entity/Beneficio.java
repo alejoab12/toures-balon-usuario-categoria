@@ -15,7 +15,7 @@ public class Beneficio {
     private Integer id;
     private String nombre;
     private String descripcion;
-    private double descuento;
+    private Double descuento;
 
     public Beneficio() {
     }
@@ -27,7 +27,7 @@ public class Beneficio {
     public Beneficio(BeneficioModelo beneficioModelo){
         this.id=beneficioModelo.getId();
         this.nombre=beneficioModelo.getNombre();
-        this.setDescripcion(beneficioModelo.getDescripcion());
-        this.setDescuento(beneficioModelo.getDescuento());
+        this.descripcion=beneficioModelo.getDescripcion();
+        this.descuento=beneficioModelo.getDescuento();
     }
 }

@@ -9,7 +9,7 @@ public class BeneficioModelo {
     private String nombre;
     private String descripcion;
     private Double descuento;
-
+    public BeneficioModelo(){}
     public BeneficioModelo(Beneficio beneficio) {
         this.id = beneficio.getId();
         this.nombre = beneficio.getNombre();

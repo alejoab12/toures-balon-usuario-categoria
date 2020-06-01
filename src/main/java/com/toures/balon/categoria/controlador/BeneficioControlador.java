@@ -10,9 +10,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
-
-@RequestMapping("/categoria/beneficio")
 @RestController
+@RequestMapping("/categoria/beneficio")
 public class BeneficioControlador {
     @Autowired
     private BeneficioServicio beneficioServicio;
