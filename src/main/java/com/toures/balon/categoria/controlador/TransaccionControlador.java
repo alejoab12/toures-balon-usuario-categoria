@@ -12,11 +12,11 @@ import com.toures.balon.categoria.modelo.TransaccionModelo;
 import com.toures.balon.usuario.servicio.TransaccionService;
 
 @RestController
-@RequestMapping("/transaccion")
+@RequestMapping("/categoria/transaccion")
 public class TransaccionControlador {
 	private TransaccionService transaccionService;
 
-	@GetMapping("/all")
+	@GetMapping("/usuario")
 	public ResponseEntity<List<TransaccionModelo>> buscarTodosPorIdCliente(
 			@RequestParam("idUsuario") String idUsuario) {
 		return ResponseEntity.ok(transaccionService.buscarTransaccionesPorIdCliente(idUsuario));
