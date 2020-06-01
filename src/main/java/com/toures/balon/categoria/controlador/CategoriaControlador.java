@@ -17,7 +17,6 @@ import java.util.List;
 public class CategoriaControlador {
     @Autowired
     private CategoriaServicio categoriaServicio;
-    private @Valid CategoriaModelo categoria;
 
     @GetMapping(value = "/all", produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
     public ResponseEntity<List<CategoriaModelo>> buscarTodos() {
