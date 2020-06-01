@@ -12,7 +12,7 @@ public class CategoriaModelo {
     private String nombre;
     private Double puntosNecesarios;
     private List<BeneficioModelo> beneficios;
-
+    public CategoriaModelo(){}
     public CategoriaModelo(Categoria categoria) {
         this.id = categoria.getId();
         this.nombre = categoria.getNombre();
