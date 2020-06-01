@@ -45,7 +45,11 @@ public class TransaccionServiceImp implements TransaccionService {
 
     @Override
     public List<TransaccionModelo> buscarTransaccionesPorIdCliente(String idCliente) {
-        return transaccionRepo.findByIdUsuario(idCliente).stream().map(t -> modelMapper.map(t, TransaccionModelo.class))
+       Optional<List<Transaccion>> optionalTransaccion= transaccionRepo.findByIdUsuario(idCliente);
+       if(!optionalTransaccion.isPresent()){
+           throw  new ExcepcionPersonalizada(404,"No se encuentran transacciones para el usuario");
+       }
+        return optionalTransaccion.get().stream().map(t -> modelMapper.map(t, TransaccionModelo.class))
                 .collect(Collectors.toList());
     }
 

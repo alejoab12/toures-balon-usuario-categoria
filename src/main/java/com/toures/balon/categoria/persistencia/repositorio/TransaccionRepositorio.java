@@ -10,7 +10,8 @@ import java.util.Optional;
 
 @Repository
 public interface TransaccionRepositorio extends JpaRepository<Transaccion, String> {
-    List<Transaccion> findByIdUsuario(String idUsuario);
+
+    Optional<List<Transaccion>> findByIdUsuario(String idUsuario);
 	@Query(value = "select * from transaccion t where t.id_usuario=:usuarioId   order by t.fecha_transaccion desc limit 1",nativeQuery = true)
     Optional<Transaccion> buscarUltimaTransaccionPorUsuario(String usuarioId);
 }
