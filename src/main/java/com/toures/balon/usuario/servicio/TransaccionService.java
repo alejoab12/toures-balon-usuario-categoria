@@ -1,14 +1,15 @@
 package com.toures.balon.usuario.servicio;
 
-import java.util.List;
-
+import com.toures.balon.categoria.modelo.PagoModelo;
 import com.toures.balon.categoria.modelo.TransaccionModelo;
 import com.toures.balon.usuario.modelo.UsuarioModelo;
 
-public interface TransaccionService {
-	public void crearTransaccionConUsuarioNuevo(UsuarioModelo usuarioModel);
-	
-	public void sumarPuntos();
+import java.util.List;
 
-	public List<TransaccionModelo> buscarTransaccionesPorIdCliente(String idCliente);
+public interface TransaccionService {
+    void crearTransaccionConUsuarioNuevo(UsuarioModelo usuarioModel);
+
+    void sumarPuntos(PagoModelo pago);
+
+    List<TransaccionModelo> buscarTransaccionesPorIdCliente(String idCliente);
 }

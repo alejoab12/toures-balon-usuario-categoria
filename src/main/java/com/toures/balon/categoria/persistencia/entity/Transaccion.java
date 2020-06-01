@@ -1,14 +1,10 @@
 package com.toures.balon.categoria.persistencia.entity;
 
+import lombok.Data;
+
+import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-import lombok.Data;
 
 @Data
 @Entity
@@ -22,7 +18,8 @@ public class Transaccion {
 	private BigDecimal acumuladoTotal;
 	@Column(name = "fecha_transaccion")
 	private Timestamp fechaTransaccion;
-	@Column(name = "categoria_id")
-	private Integer categoriaId;
+	@JoinColumn(name = "categoria_id")
+	@ManyToOne(targetEntity = Categoria.class)
+	private Categoria categoriaId;
 	private BigDecimal valor;
 }

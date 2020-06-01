@@ -20,12 +20,14 @@ spring:
  #    base-url: http://localhost:9411/
   jpa:
     show-sql: true
+    hibernate:
+      ddl-auto: update
   datasource:
-    url: jdbc:mysql://localhost:3306/toures-balon-categoria
+    url: jdbc:mysql://localhost:3306/toures_balon_categoria?createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
-    password: root
-  application:
-    name: toures-balon-usuario
+    password:
+    platform: mysql
+    initialization-mode: always
   profiles: 
     active:
     - dev

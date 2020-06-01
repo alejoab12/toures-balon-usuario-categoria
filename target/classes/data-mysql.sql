@@ -1,0 +1,1 @@
+INSERT IGNORE INTO `categoria` (`id`, `nombre`, `puntos_necesarios`) VALUES (1, 'Plateado', '100000.00'),(2, 'Dorado', '500000.00'),(3, 'Platino', '2000000.00');
