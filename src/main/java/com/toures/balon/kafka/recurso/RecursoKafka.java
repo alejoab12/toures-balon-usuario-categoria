@@ -19,8 +19,8 @@ public class RecursoKafka {
         transaccionService.crearTransaccionConUsuarioNuevo(objectMapper.readValue(message, UsuarioModelo.class));
     }
 
-    @KafkaListener(topics = "toures-balon-pago", groupId = "toures-balon-pago")
+   /* @KafkaListener(topics = "toures-balon-pago", groupId = "toures-balon-pago")
     public void listenPagos(String message) throws Exception {
 
-    }
+    }*/
 }
