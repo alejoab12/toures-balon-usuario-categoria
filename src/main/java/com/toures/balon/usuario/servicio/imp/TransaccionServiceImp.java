@@ -39,7 +39,7 @@ public class TransaccionServiceImp implements TransaccionService {
         transaccion.setFechaTransaccion(new Timestamp(System.currentTimeMillis()));
         transaccion.setId(uuid.toString());
         transaccion.setIdUsuario(usuarioModel.getId());
-        transaccionRepo.saveAndFlush(transaccion);
+        transaccionRepo.save(transaccion);
 
     }
 
@@ -65,7 +65,7 @@ public class TransaccionServiceImp implements TransaccionService {
         transaccion.setFechaTransaccion(new Timestamp(System.currentTimeMillis()));
         transaccion.setId(UUID.randomUUID().toString());
         transaccion.setCategoriaId(validarCategoria(transaccion.getAcumuladoTotal()));
-        transaccionRepo.saveAndFlush(transaccion);
+        transaccionRepo.save(transaccion);
     }
 
     private Categoria validarCategoria(BigDecimal totalAcomulado) {

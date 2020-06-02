@@ -2,7 +2,7 @@ spring:
   application:
     name: toures-balon-usuario-categoria
 server:
-  port: 9876
+  port: 9878
 ---
 
 eureka:
