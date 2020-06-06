@@ -19,3 +19,10 @@ spec:
           image: alejoab12/toures-balon-usuario-categoria
           ports:
             - containerPort: 8080
+          resources:
+            requests:
+              memory: "350Mi"
+              cpu: "100m"
+            limits:
+              memory: "600Mi"
+              cpu: "850m"
